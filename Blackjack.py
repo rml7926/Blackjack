@@ -27,6 +27,11 @@ while True:
     if dealercard1 == 11 and dealercard2 == 11:
         dealercard2 = 1
 
+    #telling the user what they have and one of the dealers cards
+    print ("You drew", usercard1, "and", usercard2)
+
+    print ("The dealer has a", dealercard1)
+
     if usercard1 == 11:
         print ("Your first card was an ace!")
         usercard1 = int(input("Do you want the ace to be an 11 or a 1: "))
@@ -41,7 +46,7 @@ while True:
     dealertotal = dealercard1 + dealercard2
 
     #telling the user what they have and one of the dealers cards
-    print ("You drew", usercard1, "and", usercard2)
+    print ("You have a ", usercard1, "and", usercard2)
     print ("Your total is", usertotal)
 
     print ("The dealer has a", dealercard1)
@@ -83,7 +88,7 @@ while True:
     print ("The dealer total is", dealertotal)
     
     #dealer wins
-    if (dealertotal > usertotal and dealertotal <= 21) or usertotal > 21 or (dealertotal == usertotal and usertotal!= 21):
+    if (dealertotal > usertotal and dealertotal <= 21) or usertotal > 21 or (dealertotal == usertotal and usertotal != 21):
         print ("Dealer wins")
         bank = bank - wager
         print ("Your current balance is:", bank)
